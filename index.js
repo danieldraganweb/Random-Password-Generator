@@ -92,17 +92,28 @@ const characters = [
   "/",
 ];
 
-let passwordLength = 15;
-function toogleLightMode() {
-  var element = document.body;
-  element.classList.toggle("light-mode");
-}
-function myFunction() {
-  let checkBox = document.getElementById("myCheck");
-  let text = document.getElementById("text");
-  if (checkBox.checked == true) {
-    text.style.display = "block";
+let password = "";
+let passwordLenght = 15;
+let inputElOne = document.querySelector("input-el-1");
+console.log(inputEl1);
+let inputElTwo = document.querySelector("input-el-2");
+console.log(inputEl2);
+
+function generateRandomPasswords() {
+  for (let i = 0; i < characters.length; i++) {
+    let randomIndexOne = Math.floor(Math.random() * characters.length);
+    let randomIndexTwo = Math.floor(Math.random() * characters.length);
+    inputElOne.textContent = characters[randomIndexOne];
+    inputElTwo.textContent = characters[randomIndexTwo];
+  }
+  if (inputElOne.textContent === inputElTwo.textContent) {
+    generateRandomPasswords();
   } else {
-    text.style.display = "none";
+    password = inputElOne.textContent + inputElTwo.textContent;
+  }
+
+  for (let i = 0; i < passwordLenght; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters[randomIndex];
   }
 }
