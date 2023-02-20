@@ -36,12 +36,13 @@ body {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  line-height: normal;
   color: lightyellow;
 }
 .main-container p {
   font-size: 1.5rem;
   font-weight: 400;
-  margin: 0;
+  margin: 13px 10px;
   padding: 0;
   color: lightyellow;
 }
@@ -134,7 +135,6 @@ button:disabled:focus {
 }
 
 .checkbox {
-  border: 1px solid #ffffff;
   display: flex;
   flex-direction: row;
   align-content: space-around;
@@ -147,7 +147,7 @@ button:disabled:focus {
   margin: 0 auto;
   margin-top: none;
   padding: 0 15px;
-  border-radius: 1em;
+  border-radius: 5px;
   color: #4caf50;
 }
 .checkbox input {
@@ -191,7 +191,7 @@ button:disabled:focus {
 input {
   font-size: 20px;
   gap: 10px;
-  width: 240px;
+  width: 243px;
   height: 50px;
   border-radius: 5px;
   text-align: center;
