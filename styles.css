@@ -110,6 +110,84 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  opacity: 0.6;
+}
+button:focus {
+  outline: none;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  opacity: 0.6;
+}
+button:disabled:active {
+  opacity: 0.6;
+}
+button:disabled:focus {
+  outline: none;
+}
+
+.checkbox {
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 260px;
+  max-width: 50%;
+  height: 40px;
+  max-height: 100%;
+  margin: 0 auto;
+  margin-top: none;
+  padding: 0 15px;
+  border-radius: 1em;
+  color: #4caf50;
+}
+.checkbox input {
+  width: 30px;
+  height: 30px;
+  margin: 10 10px;
+}
+.checkbox label {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.checkbox p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #1b252a;
+}
+.checkbox input[type="checkbox"]:checked {
+  background-color: #4caf50;
+}
+.checkbox input[type="checkbox"]:checked::before {
+  content: "\2713";
+  display: block;
+  text-align: top;
+  color: #ffffff;
+}
+
 input {
   font-size: 20px;
   gap: 10px;
@@ -122,9 +200,6 @@ input {
   color: #4caf50;
 }
 
-button:hover {
-  opacity: 0.8;
-}
 .slider.round {
   border-radius: 34px;
 }
@@ -165,7 +240,7 @@ button:hover {
   border-radius: 50%;
 }
 p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: 0;
   padding: 0;

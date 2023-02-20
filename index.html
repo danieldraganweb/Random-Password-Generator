@@ -22,13 +22,19 @@
                 <button id="copy">Copy</button>
             </div>
         </div>
+        <div class="checkbox">
+            <label for="myCheck">Symbols:</label> 
+            <input type="checkbox" id="symbolCheck" onclick="removeSymbols()">
+            <br/>
+            <label for="myCheck">Numbers:</label> 
+            <input type="checkbox" id="numbersCheck" onclick="removeNumbers()">
+        </div>
         <div class="generate-btn">
             <button  id="generate">Generate</button>
         </div>
         <div class="slider">
-            
             <label class="switch">
-                <span class="slider round"></span>
+                <span onclick="toogleLightMode" class="slider round"></span>
             </label>
         </div>
     </div> 
