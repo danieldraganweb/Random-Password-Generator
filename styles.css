@@ -141,13 +141,14 @@ button:disabled:focus {
 }
 
 .checkbox {
+  border: #4caf50 2px solid;
   display: flex;
   flex-direction: row;
   align-content: space-around;
   align-items: center;
   justify-content: space-evenly;
-  width: 260px;
-  max-width: 50%;
+  width: 100%;
+  max-width: 70%;
   height: 40px;
   max-height: 100%;
   margin: 0 auto;

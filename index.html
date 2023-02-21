@@ -22,17 +22,20 @@
                 <button id="copy" onclick="copyPasswordTwo()">Copy</button>
             </div>
         </div>
-        <h3 style="margin-left: auto ; margin-right:auto ; margin:none; color: #4caf50; ">Exclude</h3>
         <div class="checkbox">
-           
-            <label for="myCheck1">Symbols:</label> 
+            <label for="myCheck1">Upper Case:</label>
+            <input type="checkbox" id="symbolCheck" onclick="includeUpperCase()">
+            <label for="myCheck2">Lower Case:</label>
+            <input type="checkbox" id="symbolCheck" onclick="includeLowerCase()">
+            <br/>
+            <label for="myCheck3">Symbols:</label> 
             <input type="checkbox" id="symbolCheck" onclick="includeSymbols()">
             <br/>
-            <label for="myCheck2">Numbers:</label> 
+            <label for="myCheck4">Numbers:</label> 
             <input type="checkbox" id="numbersCheck" onclick="includeNumbers()">
         </div>
         <div class="generate-btn">
-            <button  id="generate" onclick="generateRandomPassword()">Generate</button>
+            <button  id="generate" onclick="newRandomPassword()">Generate</button>
         </div>
         <div class="slider">
             <label class="switch">
