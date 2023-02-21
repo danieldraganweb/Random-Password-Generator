@@ -156,6 +156,7 @@ button:disabled:focus {
   padding: 0 15px;
   border-radius: 5px;
   color: #4caf50;
+  position: relative;
 }
 .checkbox input {
   width: 30px;
