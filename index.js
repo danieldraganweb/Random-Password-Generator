@@ -94,9 +94,11 @@ const characters = [
 
 let passwordLenght = 15;
 let inputElOne = document.getElementById("input-el-1");
-console.log(inputElOne);
+console.log(inputElOne.textContent);
 let inputElTwo = document.getElementById("input-el-2");
-console.log(inputElTwo);
+console.log(inputElTwo.textContent);
+const generatedPasswordOne = generateRandomPassword();
+const generatedPasswordTwo = generateRandomPassword();
 
 function getRandomCharacter() {
   let randomChar = Math.floor(Math.random() * characters.length);
@@ -116,8 +118,6 @@ function generateRandomPassword() {
   return randomPassword;
 }
 
-const generatedPasswordOne = generateRandomPassword();
-const generatedPasswordTwo = generateRandomPassword();
 console.log(
   "Here is two random passwords: ",
   generatedPasswordOne,
@@ -127,10 +127,10 @@ console.log(
 function copyPasswordOne() {
   inputElOne.select();
   document.execCommand("copy");
-  alert(`Password copied: ${inputElOne.value}`);
+  inputElOne.value = "Copied!";
 }
 function copyPasswordTwo() {
   inputElTwo.select();
   document.execCommand("copy");
-  alert(`Password copied: ${inputElOne.value}`);
+  inputElTwo.value = "Copied!";
 }
