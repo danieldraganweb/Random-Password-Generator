@@ -97,8 +97,8 @@ let inputElOne = document.getElementById("input-el-1");
 console.log(inputElOne.textContent);
 let inputElTwo = document.getElementById("input-el-2");
 console.log(inputElTwo.textContent);
-const generatedPasswordOne = generateRandomPassword();
-const generatedPasswordTwo = generateRandomPassword();
+let generatedPasswordOne = generateRandomPassword();
+let generatedPasswordTwo = generateRandomPassword();
 
 function getRandomCharacter() {
   let randomChar = Math.floor(Math.random() * characters.length);
@@ -109,15 +109,25 @@ function generateRandomPassword() {
   let randomPassword = "";
   for (let i = 0; i < passwordLenght; i++) {
     randomPassword += getRandomCharacter();
-    inputElOne.value = randomPassword;
-    inputElTwo.value = randomPassword;
-  }
-  if (randomPassword.length > 15) {
-    randomPassword = randomPassword.slice(0, 15);
+    // inputElOne.value = randomPassword;
+    // inputElTwo.value = randomPassword;
   }
   return randomPassword;
 }
-
+function generatePassword() {
+  inputElOne.value = generateRandomPassword();
+  inputElTwo.value = generateRandomPassword();
+}
+if (generatedPasswordOne && generatedPasswordTwo) {
+  inputElOne.value = generatedPasswordOne;
+  inputElTwo.value = generatedPasswordTwo;
+}
+function newRandomPassword() {
+  generatedPasswordOne = generateRandomPassword();
+  generatedPasswordTwo = generateRandomPassword();
+  inputElOne.value = generatedPasswordOne;
+  inputElTwo.value = generatedPasswordTwo;
+}
 console.log(
   "Here is two random passwords: ",
   generatedPasswordOne,
@@ -133,4 +143,16 @@ function copyPasswordTwo() {
   inputElTwo.select();
   document.execCommand("copy");
   inputElTwo.value = "Copied!";
+}
+// Function to exclude symbols
+function excludeSymbols() {
+  characters.splice(62, 32);
+  console.log(characters);
+  newRandomPassword();
+}
+// Function to exclude numbers
+function excludeNumbers() {
+  characters.splice(52, 10);
+  console.log(characters);
+  newRandomPassword();
 }
