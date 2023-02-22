@@ -193,6 +193,14 @@ checkbox.addEventListener("change", function () {
     document.getElementById("container-el").style.border = "5px solid #6096b4";
     document.getElementById("container-el").style.outline = "none";
     document.getElementById("container-el").style.boxShadow = "#4caf50";
+    document.getElementById("upCaseCheck").style.backgroundColor = "#273549";
+    document.getElementById("upCaseCheck").style.color = "white";
+    document.getElementById("lowCaseCheck").style.backgroundColor = " #273549";
+    document.getElementById("lowCaseCheck").style.color = "white";
+    document.getElementById("numbersCheck").style.backgroundColor = " #273549";
+    document.getElementById("numbersCheck").style.color = "white";
+    document.getElementById("symbolCheck").style.backgroundColor = "#273549";
+    document.getElementById("symbolCheck").style.color = "white";
   } else {
     return darkMode;
   }

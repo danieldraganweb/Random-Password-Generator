@@ -145,7 +145,7 @@ button:hover:before {
   align-content: center;
   align-items: center;
   justify-content: center;
-  border-top: 3px solid lighty;
+  border-top: 3px solid #6096b4;
   width: 60%;
   padding: 10px 0;
 }
@@ -245,9 +245,9 @@ button:hover:before {
   outline: none;
   width: 20px;
   height: 20px;
-  border: 1px solid #ffffff;
+  border: 2px solid #4caf50;
   border-radius: 5px;
-  background-color: #1b252a;
+  background-color: #273549;
 }
 .checkbox input[type="checkbox"]:checked {
   background-color: #4caf50;
