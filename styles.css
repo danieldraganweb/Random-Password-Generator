@@ -3,7 +3,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.2;
-  color: #e3eff3;
+  color: #5f939a;
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
@@ -39,14 +39,14 @@ body {
   margin: 0;
   padding: 0;
   line-height: normal;
-  color: lightyellow;
+  color: #5f939a;
 }
 .main-container p {
   font-size: 1.5rem;
   font-weight: 400;
   margin: 13px 10px;
   padding: 0;
-  color: lightyellow;
+  color: #5f939a;
 }
 .password {
   display: flex;
@@ -81,7 +81,7 @@ body {
 .password button {
   background-color: #4caf50;
   border: none;
-  color: lightyellow;
+  color: #5f939a;
   padding: 10px 50px;
   text-align: center;
   text-decoration: none;
@@ -145,7 +145,7 @@ button:hover:before {
   align-content: center;
   align-items: center;
   justify-content: center;
-  border-top: 3px solid #ffffff;
+  border-top: 3px solid lighty;
   width: 60%;
   padding: 10px 0;
 }

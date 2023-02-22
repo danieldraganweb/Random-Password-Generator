@@ -148,19 +148,56 @@ function copyPasswordTwo() {
   navigator.clipboard.writeText(inputElTwo.value);
   inputElTwo.value = "Copied!";
 }
-
+// Toggle Light Mode
 let checkbox = document.getElementById("checkbox");
 checkbox.addEventListener("change", function () {
-  if (this.checked && darkMode) {
-    document.body.style.backgroundColor = "#1e1e1e";
-    document.body.style.color = "#fff";
-    document.getElementById("container-el").style.backgroundColor = "#fff";
+  if (this.checked === true && darkMode === true) {
+    document.body.style.backgroundColor = "#FEFBF3";
+    document.body.style.color = "#4caf50";
+    document.getElementById("input-el-1").style.backgroundColor = "white";
+    document.getElementById("input-el-1").style.color = "#4caf50";
+    document.getElementById("input-el-2").style.backgroundColor = "white";
+    document.getElementById("input-el-2").style.color = "#4caf50";
+    document.getElementById("input-el-1").style.border = "1px solid #4caf50";
+    document.getElementById("input-el-2").style.border = "1px solid #4caf50";
+    document.getElementById("input-el-1").style.outline = "none";
+    document.getElementById("input-el-2").style.outline = "none";
+    document.getElementById("container-el").style.backgroundColor = "gainsboro";
+    document.getElementById("container-el").style.color = "#4caf50";
+    document.getElementById("container-el").style.border = "5px solid #4caf50";
+    document.getElementById("container-el").style.outline = "none";
+    document.getElementById("container-el").style.boxShadow = "#4caf50";
+    document.getElementById("upCaseCheck").style.backgroundColor = "#4caf50";
+    document.getElementById("upCaseCheck").style.color = "white";
+    document.getElementById("lowCaseCheck").style.backgroundColor = "#4caf50";
+    document.getElementById("lowCaseCheck").style.color = "white";
+    document.getElementById("numbersCheck").style.backgroundColor = "#4caf50";
+    document.getElementById("numbersCheck").style.color = "white";
+    document.getElementById("symbolCheck").style.backgroundColor = "#4caf50";
+    document.getElementById("symbolCheck").style.color = "white";
+  }
+  //revert to dark mode
+  if (!this.checked && darkMode === true) {
+    document.body.style.backgroundColor = "#1f2937";
+    document.body.style.color = "#5F939A";
+    document.getElementById("input-el-1").style.backgroundColor = "#273549";
+    document.getElementById("input-el-1").style.color = "#4caf50";
+    document.getElementById("input-el-2").style.backgroundColor = "#273549";
+    document.getElementById("input-el-2").style.color = "#4caf50";
+    document.getElementById("input-el-1").style.border = "1px solid #1b252a";
+    document.getElementById("input-el-2").style.border = "1px solid #1b252a";
+    document.getElementById("input-el-1").style.outline = "none";
+    document.getElementById("input-el-2").style.outline = "none";
+    document.getElementById("container-el").style.backgroundColor = "#1b252a";
+    document.getElementById("container-el").style.color = "#4caf50";
+    document.getElementById("container-el").style.border = "5px solid #6096b4";
+    document.getElementById("container-el").style.outline = "none";
+    document.getElementById("container-el").style.boxShadow = "#4caf50";
   } else {
-    document.body.style.backgroundColor = "#fff";
-    document.body.style.color = "#000";
-    document.getElementById("container-el").style.backgroundColor = "#1e1e1e";
+    return darkMode;
   }
 });
+
 // Function to include all characters
 function includeAllCharacters() {
   characters.splice(

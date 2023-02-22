@@ -9,7 +9,7 @@
 <body>
     <div class="main-container" id="container-el"> 
         <div class="header">
-            <h1>Generate a <span style="color: #4caf50"> random password</span> </h1>
+            <h1 class="header-el">Generate a <span style="color: #4caf50"> random password</span> </h1>
             <p>Never use an insecure password again.</p>
         </div>
         <div class="password">
@@ -22,7 +22,7 @@
                 <button id="copy" onclick="copyPasswordTwo()">Copy</button>
             </div>
         </div>
-        <div class="checkbox">
+        <div id="checkbox-el-select" class="checkbox">
             <label for="myCheck1">Upper Case:</label>
             <input type="checkbox" id="upCaseCheck" onclick="includeUpperCase()">
             <label for="myCheck2">Lower Case:</label>
