@@ -113,7 +113,7 @@ body {
 }
 
 button:hover {
-  color: #82ffc9;
+  color: #000000;
   box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6),
     0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
